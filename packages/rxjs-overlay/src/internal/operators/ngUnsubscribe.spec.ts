@@ -1,8 +1,7 @@
-import { expect } from "chai";
-import { interval } from "rxjs";
-import { ngUnsubscribe } from "./ngUnsubscribe";
-describe("test ngUnsubscribe", () => {
-  it("unsubscribe on ngOnDestroy", (done) => {
+import { interval } from 'rxjs';
+import { ngUnsubscribe } from './ngUnsubscribe';
+describe('test ngUnsubscribe', () => {
+  it('unsubscribe on ngOnDestroy', (done) => {
     let wasOrginalNgOnDestroyExecuted = false;
     const component: any = {
       ngOnDestroy: () => {
@@ -13,7 +12,7 @@ describe("test ngUnsubscribe", () => {
       .pipe(ngUnsubscribe(component))
       .subscribe({
         complete: () => {
-          expect(wasOrginalNgOnDestroyExecuted).to.equals(true);
+          expect(wasOrginalNgOnDestroyExecuted).toBe(true);
           done();
         },
       });

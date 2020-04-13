@@ -1,1 +1,1 @@
-export * from "./internal/observable/spawn";
+export * from './internal/observable/spawn';

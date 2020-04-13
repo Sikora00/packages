@@ -1,5 +1,5 @@
-import { spawn as spawnL, SpawnOptions } from "child_process";
-import { Observable, Subject } from "rxjs";
+import { spawn as spawnL, SpawnOptions } from 'child_process';
+import { Observable, Subject } from 'rxjs';
 
 export interface SpawnResult {
   signal$: Observable<number>;
@@ -21,7 +21,7 @@ export function spawn(
   const execSpawn = () => {
     const signal = spawnL(command, args, options);
 
-    signal.on("close", (code: number | undefined) => {
+    signal.on('close', (code: number | undefined) => {
       signal$.next(code);
       signal$.complete();
     });

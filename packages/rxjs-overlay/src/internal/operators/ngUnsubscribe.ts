@@ -1,5 +1,5 @@
-import { MonoTypeOperatorFunction, Observable, Subject } from "rxjs";
-import { takeUntil } from "rxjs/operators";
+import { MonoTypeOperatorFunction, Observable, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 /**
  * Automatically complete out subscription if a component is destroyed
