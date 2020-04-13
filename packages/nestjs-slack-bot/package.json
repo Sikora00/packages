@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/Sikora00/packages.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "nestjs",
     "slack",
@@ -21,5 +24,6 @@
   "bugs": {
     "url": "https://github.com/Sikora00/packages/issues"
   },
-  "homepage": "https://github.com/Sikora00/packages#readme"
+  "homepage": "https://github.com/Sikora00/packages#readme",
+  "gitHead": "bd0ae614d5e82ad13a00df6875ad89df50dadcb7"
 }
