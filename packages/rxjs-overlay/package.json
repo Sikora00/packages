@@ -9,7 +9,7 @@
     "preversion": "npm test",
     "version": "npm run build && cp -r ./dist/* . && rm -rf ./dist",
     "postversion": "git clean -fd",
-    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -36,12 +36,7 @@
     "rxjs": "^6.0.0"
   },
   "devDependencies": {
-    "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.7",
     "@types/node": "^8.9.5",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.0",
-    "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   },
   "gitHead": "bd0ae614d5e82ad13a00df6875ad89df50dadcb7"
