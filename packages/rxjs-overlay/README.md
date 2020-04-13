@@ -12,4 +12,5 @@
 
 # New operators:
 
-- ngUnsubscribe (complete observable on ngOnDestroy)
+- filterFalsy alias for the `filter(Boolean)` operator
+- (deprecated) ngUnsubscribe (complete observable on ngOnDestroy)
