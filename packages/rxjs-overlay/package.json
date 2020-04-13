@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sikora00/rxjs-overlay.git"
+    "url": "git+https://github.com/Sikora00/packages.git"
   },
   "keywords": [
     "Rx",
