@@ -1,6 +1,6 @@
 {
   "name": "@sikora00/rxjs-overlay",
-  "version": "2.0.0",
+  "version": "2.1.0-alpha.2",
   "description": "Additional operators for rxjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
