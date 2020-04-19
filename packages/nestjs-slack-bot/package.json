@@ -2,8 +2,16 @@
   "name": "@sikora00/nestjs-slack-bot",
   "version": "0.1.0-alpha.2",
   "description": "A module for Nest.js to handle incoming messages from slack as a commands.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "rm -rf dist && tsc --build tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -25,5 +33,11 @@
     "url": "https://github.com/Sikora00/packages/issues"
   },
   "homepage": "https://github.com/Sikora00/packages#readme",
-  "gitHead": "bd0ae614d5e82ad13a00df6875ad89df50dadcb7"
+  "gitHead": "bd0ae614d5e82ad13a00df6875ad89df50dadcb7",
+  "dependencies": {
+    "@slack/client": "^5.0.2"
+  },
+  "peerDependencies": {
+    "reflect-metadata": "^0.1.12"
+  }
 }

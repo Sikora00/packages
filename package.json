@@ -26,5 +26,10 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "dependencies": {
+    "@golevelup/nestjs-discovery": "^2.3.0",
+    "@nestjs/common": "^7.0.8",
+    "@nestjs/core": "^7.0.8"
   }
 }
