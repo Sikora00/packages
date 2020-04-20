@@ -16,7 +16,6 @@ import {
 } from '@angular-devkit/schematics';
 import {
   DeclarationOptions,
-  mergeSourceRoot,
   ModuleDeclarator,
   ModuleFinder,
 } from '@nestjs/schematics/dist';
@@ -27,11 +26,7 @@ export function main(options: CommandOptions): Rule {
   options = transform(options);
   return (tree: Tree, context: SchematicContext) => {
     return branchAndMerge(
-      chain([
-        mergeSourceRoot(options),
-        addDeclarationToModule(options),
-        mergeWith(generate(options)),
-      ])
+      chain([addDeclarationToModule(options), mergeWith(generate(options))])
     )(tree, context);
   };
 }
@@ -52,8 +47,8 @@ function transform(source: CommandOptions): CommandOptions {
 }
 
 function generate(options: CommandOptions) {
-  return (context: SchematicContext) =>
-    apply(url('./files'), [
+  return (context: SchematicContext) => {
+    return apply(url('./files'), [
       options.spec ? noop() : filter((path) => !path.endsWith('.spec.ts')),
       template({
         ...strings,
@@ -61,6 +56,7 @@ function generate(options: CommandOptions) {
       }),
       move(options.path),
     ])(context);
+  };
 }
 
 function addDeclarationToModule(options: CommandOptions): Rule {

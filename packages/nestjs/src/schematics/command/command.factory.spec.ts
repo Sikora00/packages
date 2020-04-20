@@ -117,7 +117,7 @@ export class FooBarCommand implements ICommand {
       .toPromise();
     const options: CommandOptions = {
       name: 'foo',
-      path: 'commands',
+      path: 'src/commands',
     };
     tree = await runner.runSchematicAsync('command', options, tree).toPromise();
     expect(tree.readContent(normalize('/src/app.module.ts'))).toEqual(
@@ -150,7 +150,7 @@ export class AppModule {}
       .toPromise();
     const options: CommandOptions = {
       name: 'AddFoo',
-      path: 'foo/commands',
+      path: 'src/foo/commands',
     };
     tree = await runner.runSchematicAsync('command', options, tree).toPromise();
     expect(tree.readContent(normalize('/src/foo/foo.module.ts'))).toEqual(

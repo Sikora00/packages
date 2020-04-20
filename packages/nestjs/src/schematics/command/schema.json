@@ -16,7 +16,12 @@
     "path": {
       "type": "string",
       "format": "path",
-      "description": "The path to create the command."
+      "description": "The path to create the command.",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": "Where would you like to create the source files?"
     },
     "spec": {
       "default": true,
