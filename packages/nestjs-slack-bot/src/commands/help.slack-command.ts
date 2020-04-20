@@ -5,7 +5,6 @@ import { SlackCommandHandler } from '../decorators/slack-command-handler.decorat
 import { SlackService } from '../slack.service';
 import { SlackMessage } from '../interfaces/slack-message.interface';
 
-
 @SlackCommandHandler()
 @Injectable()
 export class HelpSlackCommand implements SlackCommand {
@@ -17,8 +16,8 @@ export class HelpSlackCommand implements SlackCommand {
   async handler(command: string[], message: SlackMessage): Promise<void> {
     let helpMsg = ``;
 
-    Object.keys(this.bot.commands).forEach(key => {
-      this.bot.commands[key].forEach(command => {
+    Object.keys(this.bot.commands).forEach((key) => {
+      this.bot.commands[key].forEach((command) => {
         const typeEmiticon = command.type.startsWith(':');
         if (!typeEmiticon) {
           helpMsg += `\``;

@@ -12,13 +12,12 @@ export class Bot {
   constructor(
     private slack: SlackService,
     private readonly moduleRef: ModuleRef
-  ) {
-  }
+  ) {}
 
   async init(): Promise<void> {
     const addCommand = this.addCommand.bind(this);
     const commandHandlers = await Promise.all(
-      commandsCollection.map(type => this.moduleRef.create(type))
+      commandsCollection.map((type) => this.moduleRef.create(type))
     );
     commandHandlers.forEach(addCommand);
     this.start();
@@ -47,7 +46,7 @@ export class Bot {
     const commands = this.commands[command[0]];
 
     if (commands && commands.length) {
-      commands.forEach(c => {
+      commands.forEach((c) => {
         c.handler(command, message);
       });
     }

@@ -1,3 +1,3 @@
 export interface SlackBotModuleOptions {
-  slackToken: string
+  slackToken: string;
 }

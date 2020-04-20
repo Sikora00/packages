@@ -8,12 +8,14 @@
 
 Module for handling commands from Slack.
 
-### Usage
+## Usage
 
-#### Create your slack bot
-Create [slack bot](https://api.slack.com/apps)
+### Create your slack bot
+
+[Slack Apps](https://api.slack.com/apps)
 
 #### Import module
+
 ```typescript
 import { Module } from '@nestjs/common';
 import { SlackBotModule } from '@sikora00/nestjs-slack-bot';
@@ -21,19 +23,23 @@ import { HelloSlackCommand } from './hello.slack-command';
 
 @Module({
   imports: [SlackBotModule.forRoot({ slackToken: 'yourSlackBotToken' })],
-  providers: [
-    HelloSlackCommand
-  ]
+  providers: [HelloSlackCommand],
 })
 export class AppModule {}
 ```
 
-#### Define Slack Command Handler
+### Define Slack Command Handler
+
 Create injectable Nestjs's service with @SlackCommandHandler decorator
+
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { SlackCommand, SlackCommandHandler, SlackMessage, SlackService } from '@sikora00/nestjs-slack-bot';
-
+import {
+  SlackCommand,
+  SlackCommandHandler,
+  SlackMessage,
+  SlackService,
+} from '@sikora00/nestjs-slack-bot';
 
 @SlackCommandHandler()
 @Injectable()
@@ -49,7 +55,13 @@ export class HelloSlackCommand implements SlackCommand {
 }
 ```
 
-### Docs
-#### Help command
+## Docs
+
+## Help command
+
 Nestjs Slack Bot package has build in `help` command handler. It displays list of all registered commands in format `type: description` received from SlackCommandHandler class definitions.
 
+## Authors
+
+- [Maciej Sikorski](https://github.com/Sikora00)
+- [Patryk Zieliński](https://github.com/patryk-zielinski93)

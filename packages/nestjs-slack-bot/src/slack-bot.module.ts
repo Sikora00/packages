@@ -11,17 +11,17 @@ export class SlackBotModule implements OnModuleInit {
       module: SlackBotModule,
       providers: [
         {
-          provide: SlackService, useValue: new SlackService(options.slackToken)
+          provide: SlackService,
+          useValue: new SlackService(options.slackToken),
         },
         Bot,
-        HelpSlackCommand
+        HelpSlackCommand,
       ],
-      exports: [SlackService]
+      exports: [SlackService],
     };
   }
 
-  constructor(private bot: Bot) {
-  }
+  constructor(private bot: Bot) {}
 
   onModuleInit(): void {
     this.bot.init();

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { RTMClient, WebClient } from '@slack/client';
-import { ListenerFn } from 'eventemitter3'
+import { ListenerFn } from 'eventemitter3';
 
 @Injectable()
 export class SlackService {
