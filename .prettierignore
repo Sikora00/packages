@@ -1,0 +1,6 @@
+packages/**/CHANGELOG.md
+packages/**/package-lock.json
+
+
+packages/nestjs/src/schematics/**/files
+packages/nestjs/lib

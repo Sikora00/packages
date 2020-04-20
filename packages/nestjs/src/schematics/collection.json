@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "command": {
+      "factory": "./command/command.factory#main",
+      "description": "Create a Nest CQRS Command.",
+      "schema": "./command/schema.json"
+    }
+  }
+}

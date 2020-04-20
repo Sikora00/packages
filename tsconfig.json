@@ -11,17 +11,11 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es2017",
-    "lib": [
-      "es7"
-    ],
+    "lib": ["es7"],
     "baseUrl": "./src",
     "paths": {
-      "@sikora00/*": [
-        "./*/src"
-      ]
+      "@sikora00/*": ["./*/src"]
     }
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

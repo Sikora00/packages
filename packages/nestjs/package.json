@@ -1,0 +1,47 @@
+{
+  "name": "@sikora00/nestjs",
+  "version": "0.0.0",
+  "description": "Dev Tools for Nestjs",
+  "keywords": [
+    "Nest",
+    "Nestjs",
+    "Schematics",
+    "CLI",
+    "Node",
+    "Angular"
+  ],
+  "author": "Maciej Sikorski <maciejsikorski00@gmail.com>",
+  "homepage": "https://github.com/Sikora00/packages/tree/master/packages/nestjs",
+  "license": "ISC",
+  "main": "lib/nestjs.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sikora00/packages.git"
+  },
+  "schematics": "./lib/schematics/collection.json",
+  "scripts": {
+    "build": "rm -rf lib && tsc --build tsconfig.json",
+    "postbuild": "npm run copy:collection && npm run copy:lib",
+    "copy:collection": "cpx src/schematics/collection.json ./lib/schematics && cpx 'src/schematics/**/schema.json' lib/schematics",
+    "copy:lib": "cpx 'src/schematics/**/files/**/*.*' ./lib/schematics && cpx 'src/schematics/**/files/**/.!(gitignore)' lib/schematics",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/Sikora00/packages/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@angular-devkit/core": "9.0.6",
+    "@angular-devkit/schematics": "9.0.6",
+    "@nestjs/schematics": "^7.0.0",
+    "cpx": "^1.5.0"
+  }
+}
