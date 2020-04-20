@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.3](https://github.com/Sikora00/packages/compare/@sikora00/nestjs@0.1.0-alpha.2...@sikora00/nestjs@0.1.0-alpha.3) (2020-04-20)
+
+
+### Bug Fixes
+
+* **schematics:** fix command handler template ([7c5e514](https://github.com/Sikora00/packages/commit/7c5e5143a79ed27ff23a60abbfe0fec464ceae9a))
+
+
+
+
+
 # [0.1.0-alpha.2](https://github.com/Sikora00/packages/compare/@sikora00/nestjs@0.1.0-alpha.1...@sikora00/nestjs@0.1.0-alpha.2) (2020-04-20)
 
 
