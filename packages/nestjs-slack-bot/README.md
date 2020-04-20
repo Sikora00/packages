@@ -1,10 +1,8 @@
 # @sikora00/nestjs-slack-bot
 
-<p align="center">
-<a href="https://www.npmjs.com/package/@sikora00/nestjs-slack-bot"><img src="https://img.shields.io/npm/v/@sikora00/nestjs-slack-bot.svg?style=flat" alt="version" /></a>
-<a href="https://www.npmjs.com/package/@sikora00/nestjs-slack-bot"><img alt="downloads" src="https://img.shields.io/npm/dt/@sikora00/nestjs-slack-bot.svg?style=flat"></a>
-<img alt="license" src="https://img.shields.io/npm/l/@sikora00/nestjs-slack-bot.svg">
-</p>
+[![version](https://img.shields.io/npm/v/@sikora00/nestjs-slack-bot.svg)](https://www.npmjs.com/package/@sikora00/nestjs-slack-bot)
+[![downloads](https://img.shields.io/npm/dt/@sikora00/nestjs-slack-bot.svg)](https://www.npmjs.com/package/@sikora00/nestjs-slack-bot)
+[![license](https://img.shields.io/npm/l/@sikora00/nestjs-slack-bot.svg)](https://github.com/Sikora00/packages/blob/master/LICENSE)
 
 Module for handling commands from Slack.
 

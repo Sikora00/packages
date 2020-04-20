@@ -1,17 +1,8 @@
-<p align="center">
-    <h1>Sikora00/packages</h1>
-</p>
+# Sikora00/packages
 
-<p align="center">
-A collection of packages, modules and utilities for Nestjs, Typescript, Angular and many more. 
-</p>
+[![license](https://img.shields.io/npm/l/@sikora00/nestjs-slack-bot.svg)](https://github.com/Sikora00/packages/blob/master/LICENSE)
 
-<p align="center">
-</p>
-
-<span align="center">
-
-</span>
+A collection of packages, modules and utilities for Nestjs, Typescript, Angular and many more.
 
 | Package                                                     | Description                                                                 | Version                                                                                                                             | Changelog                                             |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
