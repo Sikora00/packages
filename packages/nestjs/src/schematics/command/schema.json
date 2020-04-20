@@ -24,6 +24,7 @@
       "x-prompt": "Where would you like to create the source files?"
     },
     "spec": {
+      "type": "boolean",
       "default": true,
       "description": "Specifies if a spec file is generated."
     }
