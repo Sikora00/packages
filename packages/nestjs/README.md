@@ -1,9 +1,7 @@
 # `@sikora00/nestjs`
 
-![npm](https://img.shields.io/npm/v/@sikora00/nesjts)
-![npm](https://img.shields.io/npm/dw/@sikora00/nesjts)
-![GitHub last commit](https://img.shields.io/github/last-commit/sikora00/nesjts)
-
+![npm](https://img.shields.io/npm/v/@sikora00/nestjs)
+![github](https://img.shields.io/github/search/sikora00/packages/nestjs)
 Dev Tools for Nestjs
 
 ## Installation
