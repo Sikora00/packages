@@ -12,6 +12,6 @@ Dev Tools for Nestjs
 
 ## Schematics
 
-| Schematics | Usage                                                        | Description                                                            |
-| ---------- | ------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| command    | `ng g @sikora00/nestjs:command AddUser src/user/commands`    | Generates Nest CQRS command with it's handler and spec for the handler |
+| Schematics | Usage                                                     | Description                                                            |
+| ---------- | --------------------------------------------------------- | ---------------------------------------------------------------------- |
+| command    | `ng g @sikora00/nestjs:command AddUser src/user/commands` | Generates Nest CQRS command with it's handler and spec for the handler |

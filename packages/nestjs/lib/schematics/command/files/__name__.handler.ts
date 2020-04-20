@@ -1,13 +1,10 @@
-import { CommandBus, CommandHandler, ICommandHandler } from '@nestjs/cqrs';
+import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
+import { <%= classify(name) %>Command } from './<%= name %>.command'
 
 
 @CommandHandler(<%= classify(name) %>Command)
 export class <%= classify(name) %>Handler implements ICommandHandler<<%= classify(name) %>Command> {
-  constructor(
-    private commandBus: CommandBus,
-    private readonly logger: LoggerService,
-    private trackRepository: TrackDomainRepository
-  ) {}
+  constructor() {}
 
   async execute(command: <%= classify(name) %>Command): Promise<void> {
 

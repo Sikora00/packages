@@ -46,16 +46,13 @@ export class FooCommand implements ICommand {
 `
     );
     expect(tree.readContent('/commands/foo/foo.handler.ts')).toEqual(
-      `import { CommandBus, CommandHandler, ICommandHandler } from '@nestjs/cqrs';
+      `import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
+import { FooCommand } from './foo.command'
 
 
 @CommandHandler(FooCommand)
 export class FooHandler implements ICommandHandler<FooCommand> {
-  constructor(
-    private commandBus: CommandBus,
-    private readonly logger: LoggerService,
-    private trackRepository: TrackDomainRepository
-  ) {}
+  constructor() {}
 
   async execute(command: FooCommand): Promise<void> {
 
