@@ -1,5 +1,6 @@
 # @sikora00/nestjs-slack-bot
 
+![build](https://github.com/sikora00/packages/workflows/sikora00/nestjs-slack-bot%20master%20workflow/badge.svg)
 [![version](https://img.shields.io/npm/v/@sikora00/nestjs-slack-bot.svg)](https://www.npmjs.com/package/@sikora00/nestjs-slack-bot)
 [![downloads](https://img.shields.io/npm/dt/@sikora00/nestjs-slack-bot.svg)](https://www.npmjs.com/package/@sikora00/nestjs-slack-bot)
 [![license](https://img.shields.io/npm/l/@sikora00/nestjs-slack-bot.svg)](https://github.com/Sikora00/packages/blob/master/LICENSE)

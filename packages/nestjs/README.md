@@ -1,5 +1,6 @@
 # @sikora00/nestjs
 
+![build](https://github.com/sikora00/packages/workflows/sikora00/nestjs%20master%20workflow/badge.svg)
 [![version](https://img.shields.io/npm/v/@sikora00/nestjs.svg)](https://www.npmjs.com/package/@sikora00/nestjs)
 [![downloads](https://img.shields.io/npm/dt/@sikora00/nestjs.svg)](https://www.npmjs.com/package/@sikora00/nestjs)
 [![license](https://img.shields.io/npm/l/@sikora00/nestjs.svg)](https://github.com/Sikora00/packages/blob/master/LICENSE)
