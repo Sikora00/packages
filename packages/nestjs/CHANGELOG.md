@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.1](https://github.com/Sikora00/packages/compare/@sikora00/nestjs@0.1.0-alpha.0...@sikora00/nestjs@0.1.0-alpha.1) (2020-04-20)
+
+
+### Bug Fixes
+
+* **schematics:** remove default source path ([52fbec2](https://github.com/Sikora00/packages/commit/52fbec2c0648daec0cad96282e4814b303431342))
+
+
+
+
+
 # 0.1.0-alpha.0 (2020-04-20)
 
 
