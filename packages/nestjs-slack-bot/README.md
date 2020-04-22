@@ -49,16 +49,41 @@ export class HelloSlackCommand implements SlackCommand {
   constructor(private slack: SlackService) {}
 
   async handler(command: string[], message: SlackMessage): Promise<void> {
-    await this.slack.sendMessage('Hello! I am SlackBot', message.channel);
+    return 'Hello! I am SlackBot';
   }
 }
 ```
+
+Then send a massage with the first word `hello` in any channel where the bot is invited.
 
 ## Docs
 
 ## Help command
 
 Nestjs Slack Bot package has build in `help` command handler. It displays list of all registered commands in format `type: description` received from SlackCommandHandler class definitions.
+
+## Interceptors
+
+To handle or modify incoming or response messages use SlackInterceptor.
+
+```typescript
+@SlackInterceptor()
+@Injectable()
+export class HelloInterceptor implements ISlackInterceptor {
+  intercept(
+    message: SlackMessage,
+    next: CallHandler<any>
+  ): Observable<any> | Promise<Observable<any>> {
+    return next.handle().pipe(
+      map((res) => {
+        if (res) {
+          return `Hello Maciej\n${res}`;
+        }
+      })
+    );
+  }
+}
+```
 
 ## Authors
 

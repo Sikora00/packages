@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { SlackCommand } from '../interfaces/slack-command';
 import { Bot } from '../bot';
 import { SlackCommandHandler } from '../decorators/slack-command-handler.decorator';
-import { SlackService } from '../slack.service';
+import { SlackCommand } from '../interfaces/slack-command';
 import { SlackMessage } from '../interfaces/slack-message.interface';
 
 @SlackCommandHandler()
@@ -11,27 +10,26 @@ export class HelpSlackCommand implements SlackCommand {
   description: string = 'list all available commands';
   type: string = 'help';
 
-  constructor(private bot: Bot, private slack: SlackService) {}
+  constructor(private bot: Bot) {}
 
-  async handler(command: string[], message: SlackMessage): Promise<void> {
+  async handler(command: string[], message: SlackMessage): Promise<string> {
     let helpMsg = ``;
 
     Object.keys(this.bot.commands).forEach((key) => {
-      this.bot.commands[key].forEach((command) => {
-        const typeEmiticon = command.type.startsWith(':');
-        if (!typeEmiticon) {
-          helpMsg += `\``;
-        }
+      const command = this.bot.commands[key];
+      const typeEmiticon = command.type.startsWith(':');
+      if (!typeEmiticon) {
+        helpMsg += `\``;
+      }
 
-        helpMsg += `${command.type}`;
-        if (!typeEmiticon) {
-          helpMsg += `\``;
-        }
+      helpMsg += `${command.type}`;
+      if (!typeEmiticon) {
+        helpMsg += `\``;
+      }
 
-        helpMsg += ` - ${command.description}\n`;
-      });
+      helpMsg += ` - ${command.description}\n`;
     });
 
-    await this.slack.sendMessage(helpMsg, message.channel);
+    return helpMsg;
   }
 }

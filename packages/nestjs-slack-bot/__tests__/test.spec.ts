@@ -2,7 +2,7 @@ import { INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import { ListenerFn } from 'eventemitter3';
 import { EventEmitter } from 'events';
-import { SlackService } from '../src';
+import { SlackService } from '../src/slack.service';
 import { AppModule } from './src/app.module';
 
 describe('Slack Bot', () => {
@@ -27,17 +27,20 @@ describe('Slack Bot', () => {
     await app.init();
   });
 
-  test(`help command`, () => {
+  test(`help command`, (done) => {
     emitter.emit('message', {
       user: '1234',
       type: 'message',
       text: 'help',
       channel: '1234',
     });
-    expect(slackService.sendMessage).toHaveBeenCalledWith(
-      '`help` - list all available commands\n',
-      '1234'
-    );
+    setTimeout(() => {
+      expect(slackService.sendMessage).toHaveBeenCalledWith(
+        'Hello Maciej\n`help` - list all available commands\n',
+        '1234'
+      );
+      done();
+    }, 1000);
   });
 
   afterEach(async () => {
