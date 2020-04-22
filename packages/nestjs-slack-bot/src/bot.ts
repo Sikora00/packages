@@ -1,6 +1,7 @@
 import { Injectable, Type } from '@nestjs/common';
 import { ModuleRef } from '@nestjs/core';
 import { SlackCommand } from './interfaces/slack-command';
+import { SlackMessage } from './interfaces/slack-message.interface';
 import { SlackService } from './slack.service';
 
 export const commandsCollection: Type<SlackCommand>[] = [];
@@ -33,7 +34,7 @@ export class Bot {
     commands.push(command);
   }
 
-  handleMessage(message: any): void {
+  handleMessage(message: SlackMessage): void {
     if (
       !message.user ||
       message.type !== 'message' ||

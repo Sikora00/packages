@@ -5,14 +5,15 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
-    "dist": "dist"
+    "dist": "dist",
+    "test": "__tests__"
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "rm -rf dist && tsc --build tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

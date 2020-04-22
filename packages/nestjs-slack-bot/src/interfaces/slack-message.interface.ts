@@ -1,9 +1,10 @@
 export interface SlackMessage {
-  type: string;
-  text: string;
   event_ts: string;
-  ts: string;
+  subtype: string;
   suppress_notification: false;
+  text: string;
+  ts: string;
+  type: string;
 
   // ids:
   channel: string;

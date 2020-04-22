@@ -1,5 +1,6 @@
 # Sikora00/packages
 
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 [![license](https://img.shields.io/npm/l/@sikora00/nestjs-slack-bot.svg)](https://github.com/Sikora00/packages/blob/master/LICENSE)
 
 A collection of packages, modules and utilities for Nestjs, Typescript, Angular and many more.
