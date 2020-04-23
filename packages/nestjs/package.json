@@ -13,23 +13,22 @@
   "author": "Maciej Sikorski <maciejsikorski00@gmail.com>",
   "homepage": "https://github.com/Sikora00/packages/tree/master/packages/nestjs",
   "license": "ISC",
-  "main": "lib/nestjs.js",
   "directories": {
-    "lib": "lib"
+    "dist": "dist"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sikora00/packages.git"
   },
-  "schematics": "./lib/schematics/collection.json",
+  "schematics": "./dist/schematics/collection.json",
   "scripts": {
-    "build": "rm -rf lib && tsc --build tsconfig.json",
-    "postbuild": "npm run copy:collection && npm run copy:lib",
-    "copy:collection": "cpx src/schematics/collection.json ./lib/schematics && cpx 'src/schematics/**/schema.json' lib/schematics",
-    "copy:lib": "cpx 'src/schematics/**/files/**/*.*' ./lib/schematics && cpx 'src/schematics/**/files/**/.!(gitignore)' lib/schematics",
+    "build": "rm -rf dist && tsc --build tsconfig.json",
+    "postbuild": "npm run copy:collection && npm run copy:dist",
+    "copy:collection": "cpx src/schematics/collection.json ./dist/schematics && cpx 'src/schematics/**/schema.json' dist/schematics",
+    "copy:dist": "cpx 'src/schematics/**/files/**/*.*' ./dist/schematics && cpx 'src/schematics/**/files/**/.!(gitignore)' dist/schematics",
     "test": "jest"
   },
   "bugs": {

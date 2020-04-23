@@ -4,63 +4,63 @@ import {
   UnitTestTree,
 } from '@angular-devkit/schematics/testing';
 import * as path from 'path';
-import { CommandOptions } from './command.schema';
+import { QueryOptions } from './query.schema';
 
-describe('Command Factory', () => {
+describe('Query Factory', () => {
   const runner: SchematicTestRunner = new SchematicTestRunner(
-    'command',
+    'query',
     path.join(process.cwd(), 'src/schematics/collection.json')
   );
   it('should manage name and path', async () => {
-    const options: CommandOptions = {
+    const options: QueryOptions = {
       name: 'foo',
-      path: 'commands',
+      path: 'queries',
     };
     const tree: UnitTestTree = await runner
-      .runSchematicAsync('command', options)
+      .runSchematicAsync('query', options)
       .toPromise();
     const files: string[] = tree.files;
     expect(
-      files.find((filename) => filename === '/commands/foo/foo.command.ts')
+      files.find((filename) => filename === '/queries/foo/foo.query.ts')
     ).toBeDefined();
     expect(
-      files.find((filename) => filename === '/commands/foo/foo.handler.spec.ts')
+      files.find((filename) => filename === '/queries/foo/foo.handler.spec.ts')
     ).toBeDefined();
     expect(
-      files.find((filename) => filename === '/commands/foo/foo.handler.ts')
+      files.find((filename) => filename === '/queries/foo/foo.handler.ts')
     ).toBeDefined();
-    expect(tree.readContent('/commands/foo/foo.command.ts')).toEqual(
-      `import { ICommand } from '@nestjs/cqrs';
+    expect(tree.readContent('/queries/foo/foo.query.ts')).toEqual(
+      `import { IQuery } from '@nestjs/cqrs';
 
-export class FooCommand implements ICommand {
+export class FooQuery implements IQuery {
   constructor() {}
 }
 `
     );
-    expect(tree.readContent('/commands/foo/foo.command.ts')).toEqual(
-      `import { ICommand } from '@nestjs/cqrs';
+    expect(tree.readContent('/queries/foo/foo.query.ts')).toEqual(
+      `import { IQuery } from '@nestjs/cqrs';
 
-export class FooCommand implements ICommand {
+export class FooQuery implements IQuery {
   constructor() {}
 }
 `
     );
-    expect(tree.readContent('/commands/foo/foo.handler.ts')).toEqual(
-      `import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
-import { FooCommand } from './foo.command'
+    expect(tree.readContent('/queries/foo/foo.handler.ts')).toEqual(
+      `import { QueryHandler, IQueryHandler } from '@nestjs/cqrs';
+import { FooQuery } from './foo.query'
 
 
-@CommandHandler(FooCommand)
-export class FooHandler implements ICommandHandler<FooCommand> {
+@QueryHandler(FooQuery)
+export class FooHandler implements IQueryHandler<FooQuery> {
   constructor() {}
 
-  async execute(command: FooCommand): Promise<void> {
+  async execute(query: FooQuery): Promise<void> {
 
   }
 }
 `
     );
-    expect(tree.readContent('/commands/foo/foo.handler.spec.ts')).toEqual(
+    expect(tree.readContent('/queries/foo/foo.handler.spec.ts')).toEqual(
       `import { Test, TestingModule } from '@nestjs/testing';
 import { FooHandler } from './foo.handler';
 
@@ -84,21 +84,21 @@ describe('FooHandler', () => {
   });
 
   it('should manage name to dasherize', async () => {
-    const options: CommandOptions = {
+    const options: QueryOptions = {
       name: 'fooBar',
       path: '',
     };
     const tree: UnitTestTree = await runner
-      .runSchematicAsync('command', options)
+      .runSchematicAsync('query', options)
       .toPromise();
     const files: string[] = tree.files;
     expect(
-      files.find((filename) => filename === '/foo-bar/foo-bar.command.ts')
+      files.find((filename) => filename === '/foo-bar/foo-bar.query.ts')
     ).toBeDefined();
-    expect(tree.readContent('/foo-bar/foo-bar.command.ts')).toEqual(
-      `import { ICommand } from '@nestjs/cqrs';
+    expect(tree.readContent('/foo-bar/foo-bar.query.ts')).toEqual(
+      `import { IQuery } from '@nestjs/cqrs';
 
-export class FooBarCommand implements ICommand {
+export class FooBarQuery implements IQuery {
   constructor() {}
 }
 `
@@ -112,16 +112,16 @@ export class FooBarCommand implements ICommand {
     let tree: UnitTestTree = await runner
       .runExternalSchematicAsync('@nestjs/schematics', 'application', app)
       .toPromise();
-    const options: CommandOptions = {
+    const options: QueryOptions = {
       name: 'foo',
-      path: 'src/commands',
+      path: 'src/queries',
     };
-    tree = await runner.runSchematicAsync('command', options, tree).toPromise();
+    tree = await runner.runSchematicAsync('query', options, tree).toPromise();
     expect(tree.readContent(normalize('/src/app.module.ts'))).toEqual(
       `import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { FooHandler } from './commands/foo/foo.handler';
+import { FooHandler } from './queries/foo/foo.handler';
 
 @Module({
   imports: [],
@@ -145,17 +145,17 @@ export class AppModule {}
     tree = await runner
       .runExternalSchematicAsync('@nestjs/schematics', 'module', module, tree)
       .toPromise();
-    const options: CommandOptions = {
-      name: 'AddFoo',
-      path: 'src/foo/commands',
+    const options: QueryOptions = {
+      name: 'GetFoo',
+      path: 'src/foo/queries',
     };
-    tree = await runner.runSchematicAsync('command', options, tree).toPromise();
+    tree = await runner.runSchematicAsync('query', options, tree).toPromise();
     expect(tree.readContent(normalize('/src/foo/foo.module.ts'))).toEqual(
       `import { Module } from '@nestjs/common';
-import { AddFooHandler } from './commands/add-foo/add-foo.handler';
+import { GetFooHandler } from './queries/get-foo/get-foo.handler';
 
 @Module({
-  providers: [AddFooHandler]
+  providers: [GetFooHandler]
 })
 export class FooModule {}
 `

@@ -12,7 +12,7 @@ describe('<%= classify(name) %>Handler', () => {
     handler = module.get<<%= classify(name) %>Handler>(<%= classify(name) %>Handler);
   });
 
-  it('should be defined', () => {
+  test('creates itself', () => {
     expect(handler).toBeDefined();
   });
 });

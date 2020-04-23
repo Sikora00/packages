@@ -5,6 +5,11 @@
       "factory": "./command/command.factory#main",
       "description": "Create a Nest CQRS Command.",
       "schema": "./command/schema.json"
+    },
+    "query": {
+      "factory": "./query/query.factory#main",
+      "description": "Create a Nest CQRS Query.",
+      "schema": "./query/schema.json"
     }
   }
 }

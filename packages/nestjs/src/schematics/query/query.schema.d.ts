@@ -1,16 +1,16 @@
 import { Path } from '@angular-devkit/core';
 
-export interface CommandOptions {
+export interface QueryOptions {
   /**
-   * The name of the command.
+   * The name of the query.
    */
   name: string;
   /**
-   * The path to create the command.
+   * The path to create the query.
    */
   path: string;
   /**
-   * The path to insert the command declaration.
+   * The path to insert the query declaration.
    */
   module?: Path;
   /**
