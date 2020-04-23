@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/Sikora00/packages/compare/@sikora00/nestjs@0.1.3...@sikora00/nestjs@0.2.0) (2020-04-23)
+
+
+### Features
+
+* **query:** schematics for Nestjs CQRS query ([a06a724](https://github.com/Sikora00/packages/commit/a06a72450414364a221bc3db278b5b183266917f))
+
+
+
+
+
 ## [0.1.3](https://github.com/Sikora00/packages/compare/@sikora00/nestjs@0.1.2...@sikora00/nestjs@0.1.3) (2020-04-22)
 
 **Note:** Version bump only for package @sikora00/nestjs
