@@ -9,7 +9,7 @@ Dev Tools for Nestjs
 
 ## Installation
 
-`npm install --save-dev @sikora/nestjs`
+`npm install --save-dev @sikora00/nestjs`
 
 ## Schematics
 
