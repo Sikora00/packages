@@ -13,7 +13,7 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@nestjs/testing": "^7.0.8",
-    "@types/jest": "^25.2.1",
+    "@types/jest": "^26.0.13",
     "husky": "^4.2.5",
     "jest": "^25.3.0",
     "jest-marbles": "^2.5.1",
