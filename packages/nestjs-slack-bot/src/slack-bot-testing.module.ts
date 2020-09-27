@@ -22,6 +22,7 @@ export class SlackBotTestingModule implements OnModuleInit {
           useClass: SlackTestingService,
         },
       ],
+      exports: [SlackService],
     };
   }
 
