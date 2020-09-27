@@ -26,6 +26,7 @@ export class SlackBotModule implements OnModuleInit {
           inject: [SLACK_TOKEN],
         },
       ],
+      exports: [SlackService],
     };
   }
 
