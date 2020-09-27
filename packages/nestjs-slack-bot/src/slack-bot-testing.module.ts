@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, OnModuleInit } from '@nestjs/common';
 import { Bot } from './bot';
 import { HelpSlackCommand } from './commands/help.slack-command';
 import { InterceptorsConsumer } from './interceptors.consumer';
@@ -17,4 +17,10 @@ import { SlackService } from './slack.service';
   ],
   exports: [SlackService],
 })
-export class SlackBotTestingModule {}
+export class SlackBotTestingModule implements OnModuleInit {
+  constructor(private bot: Bot) {}
+
+  onModuleInit(): void {
+    this.bot.init();
+  }
+}
