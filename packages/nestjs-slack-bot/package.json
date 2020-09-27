@@ -1,6 +1,6 @@
 {
   "name": "@sikora00/nestjs-slack-bot",
-  "version": "0.2.1-alpha.2",
+  "version": "0.2.1-alpha.3",
   "description": "A module for Nest.js to handle incoming messages from slack as a commands.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

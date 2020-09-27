@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1-alpha.3](https://github.com/Sikora00/packages/compare/@sikora00/nestjs-slack-bot@0.2.1-alpha.2...@sikora00/nestjs-slack-bot@0.2.1-alpha.3) (2020-09-27)
+
+
+### Bug Fixes
+
+* remove forRoot from testing module ([261b741](https://github.com/Sikora00/packages/commit/261b741476e71134a4054de2225b749b67247d1b))
+
+
+
+
+
 # [0.2.0](https://github.com/Sikora00/packages/compare/@sikora00/nestjs-slack-bot@0.1.2...@sikora00/nestjs-slack-bot@0.2.0) (2020-04-22)
 
 
