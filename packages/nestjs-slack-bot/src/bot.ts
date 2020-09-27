@@ -22,8 +22,7 @@ export class Bot {
   ) {}
 
   async init(): Promise<void> {
-    this.resolveCommands();
-    this.resolveInterceptors();
+    await Promise.all([this.resolveCommands(), this.resolveInterceptors()]);
     this.start();
   }
 

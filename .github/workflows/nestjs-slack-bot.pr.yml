@@ -3,7 +3,7 @@ name: sikora00/nestjs-slack-bot PR workflow
 on:
   pull_request:
     paths:
-      - 'packages/nestjs-slack-bot/*'
+      - 'packages/nestjs-slack-bot/**/*'
 
 jobs:
   validate:

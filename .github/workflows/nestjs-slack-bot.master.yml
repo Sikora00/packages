@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'packages/nestjs-slack-bot/*'
+      - 'packages/nestjs-slack-bot/**/*'
 
 jobs:
   validate:
