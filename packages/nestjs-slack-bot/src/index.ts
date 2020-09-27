@@ -4,4 +4,5 @@ export * from './interfaces/slack-command';
 export * from './interfaces/slack-message.interface';
 export * from './slack-bot.module';
 export * from './slack-bot-testing.module';
+export * from './slack.service';
 export * from './slack-testing.service';
