@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1-alpha.5](https://github.com/Sikora00/packages/compare/@sikora00/nestjs-slack-bot@0.2.1-alpha.4...@sikora00/nestjs-slack-bot@0.2.1-alpha.5) (2020-10-03)
+
+
+### Bug Fixes
+
+* message split ([2b30de8](https://github.com/Sikora00/packages/commit/2b30de887b98554569869c7933ebed4c739cd1fd))
+
+
+
+
+
 ## [0.2.1-alpha.4](https://github.com/Sikora00/packages/compare/@sikora00/nestjs-slack-bot@0.2.1-alpha.3...@sikora00/nestjs-slack-bot@0.2.1-alpha.4) (2020-09-27)
 
 
