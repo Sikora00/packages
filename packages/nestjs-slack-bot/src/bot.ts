@@ -39,7 +39,9 @@ export class Bot {
       return;
     }
 
-    const command = message.text.split(' ');
+    const command = message.text
+      .split(/(\s+)/)
+      .filter((e) => e.trim().length > 0);
     const commandHandler = this.commands[command[0]];
 
     if (commandHandler) {

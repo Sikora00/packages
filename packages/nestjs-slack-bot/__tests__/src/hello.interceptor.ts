@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { SlackMessage } from '../../src';
-import { SlackInterceptor } from '../../src/decorators/slack-middleware.decorator';
+import { SlackInterceptor } from '../../src/decorators/slack-interceptor.decorator';
 import {
   CallHandler,
   ISlackInterceptor,
