@@ -36,7 +36,7 @@
     "rxjs": "^6.4.0"
   },
   "devDependencies": {
-    "@types/node": "^8.9.5",
+    "@types/node": "^14.11.8",
     "typescript": "^3.5.3"
   },
   "gitHead": "bd0ae614d5e82ad13a00df6875ad89df50dadcb7"
