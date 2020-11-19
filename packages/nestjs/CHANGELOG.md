@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/Sikora00/packages/compare/@sikora00/nestjs@0.2.0...@sikora00/nestjs@0.3.1) (2020-11-19)
+
+
+### Bug Fixes
+
+* move cpx to dev dependencies ([d4ac382](https://github.com/Sikora00/packages/commit/d4ac382efb0f4ae07961c7db3e7cd6fcd346b19a))
+* **nestjs:** update installation step in reademe ([25e58c9](https://github.com/Sikora00/packages/commit/25e58c91f3e90fb24aa44d278f4a60489380c6aa))
+
+
+
+
+
 # [0.3.0](https://github.com/Sikora00/packages/compare/@sikora00/nestjs@0.3.0-alpha.0...@sikora00/nestjs@0.3.0) (2020-10-03)
 
 **Note:** Version bump only for package @sikora00/nestjs

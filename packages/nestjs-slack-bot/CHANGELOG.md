@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/Sikora00/packages/compare/@sikora00/nestjs-slack-bot@0.2.0...@sikora00/nestjs-slack-bot@0.2.2) (2020-11-19)
+
+
+### Bug Fixes
+
+* add slack service to the index ([9a027fd](https://github.com/Sikora00/packages/commit/9a027fd29b88307840810350439391c4464962ec))
+* export slack service from module ([b839b30](https://github.com/Sikora00/packages/commit/b839b301637bd70cb06fdf18db4af89165289c6e))
+* init bot for testing ([4258639](https://github.com/Sikora00/packages/commit/4258639bb8e70daea00611796280979ddd1adcf5))
+* message split ([c77a324](https://github.com/Sikora00/packages/commit/c77a3246b46d36eb09fa3c0b7aacc71149120aa0))
+* remove forRoot from testing module ([a67dc68](https://github.com/Sikora00/packages/commit/a67dc68f55cbdff1c404b2d13208b5bd14a0bb4e))
+
+
+
+
+
 ## [0.2.1](https://github.com/Sikora00/packages/compare/@sikora00/nestjs-slack-bot@0.2.1-alpha.5...@sikora00/nestjs-slack-bot@0.2.1) (2020-10-03)
 
 **Note:** Version bump only for package @sikora00/nestjs-slack-bot
