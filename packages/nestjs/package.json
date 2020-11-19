@@ -40,7 +40,9 @@
   "dependencies": {
     "@angular-devkit/core": "9.0.6",
     "@angular-devkit/schematics": "9.0.6",
-    "@nestjs/schematics": "^7.0.0",
+    "@nestjs/schematics": "^7.0.0"
+  },
+  "devDependencies": {
     "cpx": "^1.5.0"
   }
 }
